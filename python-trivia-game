@@ -1,0 +1,48 @@
+main.py
+#list all the questions and answers in dictinary 
+#select random question
+#check if the answer is correct or wrong 
+#show the final answer 
+
+import random 
+
+question_list = {
+  "What is the largest continent in the world?" : "Asia" ,
+  "What gas do humans breathe that makes up about 21 of the air?" : "Oxygen" ,
+  "Who was the first President of the United States?" : "What is 9 × 8?" ,
+  "Which country won the 2018 FIFA World Cup?" : "France" ,
+  "What is the name of the famous wizard in the “Harry Potter” series?" : "Harry Potter"  ,
+  "Who sang the song “Thriller”?" : "Michael Jackson",
+  "What is the fastest land animal?" : "Cheetah" ,
+  "Which planet is known as the Red Planet?" : "Mars" ,
+  "In “The Lion King,” who is Simba’s father?" : "Mufasa" ,
+  "What is the largest ocean in the world?" : "Pacific Ocean" ,
+  "What is the most spoken language in the world?" : "English",
+  "What company created the iPhone?" : "Apple" ,
+  "Who wrote “Romeo and Juliet”?" : "William Shakespeare",
+  "Which country has the largest population in the world?" : "China" ,
+  "In which year did the Titanic sink?" : "1912" ,
+  "Which fruit is known as the “king of fruits” in many Asian countries?" : "Durian",
+  "What is the chemical symbol for water?" : "H₂O" ,
+  "Which superhero is known as the “Caped Crusader”?" : "Batman" ,
+  "What is the largest mammal in the world?" : "Blue whale"
+
+}
+
+def python_trivia_game() :
+    questions = list (question_list.keys ())
+    total_question = 8
+    score = 0 
+    selected_random = random.sample (questions , total_question)
+    for index, question in enumerate (selected_random) :
+        print (index + 1 , question)
+        user_input = input ("Enter your answer : ").lower().strip()
+        correct_answer = question_list[question].lower()
+
+        if user_input == correct_answer :
+            print (f"Correct\n")
+            score +=1
+        else :
+            print (f"Wrong answer {correct_answer}. \n")    
+            
+python_trivia_game()
