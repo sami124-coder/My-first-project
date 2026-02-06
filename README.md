@@ -16,10 +16,6 @@ A simple trivia game that:
 - Python
 - Random module
 
-## ▶ How to Run
-```bash
-python main.py
-
 # 🔐 Password Generator (Python)
 
 A simple Python password generator that allows users to choose:
